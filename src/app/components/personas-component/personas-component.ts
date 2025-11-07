@@ -17,7 +17,7 @@ export class PersonasComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._service.getPersonas().then(response => {
+    this._service.getPersonasFetch().then(response => {
       console.log("Leyendo")
       this.personas = response
     })
