@@ -35,7 +35,7 @@ export class ServicePersonas{
     return promise;
     }
     //PETICION FETCH
-    getPersonasFetch():Promise<any>{
+    getPersonasFetch():Promise<Array<Persona>>{
         let urlApi = environment.apiPersonas;
         let request = "api/personas";
 
