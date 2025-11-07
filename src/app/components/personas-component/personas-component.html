@@ -1,0 +1,25 @@
+<div class="container my-5">
+  <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+    <div class="card-header bg-gradient bg-success text-white text-center py-4">
+      <h1 class="fw-bold mb-0">👀 API Personas</h1>
+      <p class="mb-0 text-light opacity-75">Listado actualizado de registros</p>
+    </div>
+
+    <div class="card-body p-0" *ngIf="personas.length > 0">
+      <ul class="list-group list-group-flush">
+        <li
+          class="list-group-item persona-item px-4 py-3 d-flex justify-content-between align-items-center"
+          *ngFor="let persona of personas"
+        >
+          <div>
+            <h5 class="mb-1 text-success fw-semibold">{{ persona.Nombre }}</h5>
+            <small class="text-muted">{{ persona.Email }}</small>
+          </div>
+          <span class="badge bg-success bg-opacity-75 rounded-pill shadow-sm px-3 py-2">
+            Activo
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
